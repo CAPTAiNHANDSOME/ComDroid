@@ -1,0 +1,9 @@
+ --Logger API.
+
+function ilog(loge)
+logthread = fs.open("Log.cat","a")
+logthread.writeLine("[".. os.time() .."] " .. loge)
+logthread.close()
+end
+ 
+ilog("Logger API LOADED")
