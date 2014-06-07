@@ -1,0 +1,53 @@
+ --ANDROID ON COMPUTERCRAFT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+shell.run("LogApi")
+--JOIN MY SERVER LightBulbMC.tk [ 1.7.2 CRACKED ]
+term.clear()
+--Functions To make life EASIER
+function line()
+term.write("                                                         ")
+end
+function nLi(x,y)
+term.setCursorPos(x,y)
+end
+--SystemUI Thread
+function DroidScr()
+fas = nil
+fas()
+ilog("[SystemUI] Started UI")
+ while true do 
+ sleep(0.1)
+   term.setCursorPos(1,1)
+  term.setTextColor(colors.white)
+  term.setBackgroundColor(colors.lightBlue)
+  --term.write("                                                      ")
+  term.write("                                              " .. os.time())     
+  
+  --subclass :: SYSTEM UI
+  term.setCursorPos(1,19)
+  term.write("back                                         recent")
+end
+end
+
+--LAUNCHER Thread
+function DroidLauncher()
+    sleep(0)
+    shell.run("shell LAUNCHER")
+    shell.run("shell")
+end   
+
+
+ function SysInit()
+parallel.waitForAll(DroidLauncher,DroidScr)
+ end
+ w,er = pcall(SysInit)
+ if w then
+ else
+ term.clear()
+ 
+ term.setCursorPos(1,1)
+print("System::UNEXPECTED ERROR: " .. er)
+print("Report To Developer.")
+print("System is booting to CraftOS!")
+sleep(5)
+ end
+
